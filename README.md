@@ -207,7 +207,7 @@ save and exit. Go back to root and try
 ```sh
 sudo nano /etc/ubiquity/robot.yaml
 ```
-make sure you have the following, sonars = None and the next line with sonars = ‘pi_sonar_v1’ is commented. 
+make sure you have the following, *sonars = None* and the next line with sonars = *pi_sonar_v1* is commented. 
 ``` sh
 sonars: None
 # sonars: ‘pi_sonar_v1’
