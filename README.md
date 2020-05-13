@@ -183,9 +183,36 @@ If it shows all the networks nearby then  -
 $ sudo nmcli d wifi connect my_wifi password <password>
 ```
 If for some reason it throws some error or does not show the wifi list on the command nmcli d wifi list, then try the following - 
-
+```sh
 pifi list seen
+```
+and then
+```sh
+sudo pifi add MyNetwork password
+sudo reboot
+```
+It might take few minutes to connect to wifi. So, emain patient and keep trying to ping. 
 
+Next, you need to free up the GPIO pins. Try,
+```sh
+cd /
+sudo nano /etc/pifi/pifi.conf
+```
+and change the following lines -
+```sh
+status_led: None
+button_device_name: None
+```
+save and exit. Go back to root and try
+```sh
+sudo nano /etc/ubiquity/robot.yaml
+```
+make sure you have the following, sonars = None and the next line with sonars = ‘pi_sonar_v1’ is commented. 
+``` sh
+sonars: None
+# sonars: ‘pi_sonar_v1’
+```
+Thats it. 
 
 
 
