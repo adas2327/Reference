@@ -96,7 +96,16 @@ To see all connected devices in the network
 ```sh
 arp -a
 ```
+### Chocolatey 
 
+install package from config file for the first time - 
+```
+choco install chocolatey-packages.config -y
+```
+install a software with specific version
+```
+choco install software_name --version -y
+```
 
 
 
