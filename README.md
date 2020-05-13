@@ -97,6 +97,11 @@ To see all connected devices in the network
 arp -a
 ```
 ### Chocolatey 
+Installing Chocolatey
+PowerShell v3+ prompt (Ensure Get-ExecutionPolicy is not Restricted):
+```
+Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-Expression
+```
 
 install package from config file for the first time - 
 ```
@@ -106,10 +111,28 @@ install a software with specific version
 ```
 choco install software_name --version -y
 ```
-
-
-
-
+get a list of all installed software on local drive -
+```
+choco list -li
+```
+uninstaling a package
+```
+choco uninstall git --all-versions -y
+```
+List outdated packages
+```
+choco outdated
+```
+Ignore Checksums
+```
+choco install github --ignore-checksums
+```
+Upgrade a Package
+```
+choco upgrade <pkg|all> [<pkg2> <pkgN>] [<options/switches>]
+choco upgrade git -y
+choco upgrade all -y
+```
 
 ## git 
 If youa re using git for the first time - 
