@@ -1,4 +1,13 @@
 # Reference
+
+## Python
+
+**Debugging python**
+```sh
+import pdb
+```
+and put *pdb.set_trace()* where ever break is needed - 
+
 ## Ubuntu and linux
 #### Wifi connection related 
 
