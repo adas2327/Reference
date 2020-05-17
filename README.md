@@ -31,7 +31,7 @@ $sudo rm -vr folderName
 ```sh
 $ touch filename.py
 ```
-To change the default bash directory, open the .bashrc file from home directory as below
+**To change the default bash directory**, open the .bashrc file from home directory as below
 ```sh
 nano ~/.bashrc
 ```
