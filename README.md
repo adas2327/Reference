@@ -38,7 +38,7 @@ nano ~/.bashrc
 and then just add *cd <desired dir name>* at the end. For example - 
 ```sh
 cd ~/catkin_ws/src/rpi_ros_car/src
-``
+```
 
 
 
