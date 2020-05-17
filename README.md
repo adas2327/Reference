@@ -13,19 +13,19 @@ and put *pdb.set_trace()* where ever break is needed -
 
 First, determine the name of the WiFi interface:
 ```sh
-$ nmcli d
+nmcli d
 ```
 Make sure the WiFi radio is on (which is its default state):
 ```sh
-$ nmcli r wifi on
+nmcli r wifi on
 ```
 Then, list the available WiFi networks:
 ```sh
-$ nmcli d wifi list
+nmcli d wifi list
 ```
 As an example, to connect to the access point 'my_wifi', you would use the following command:
 ```sh
-$ nmcli d wifi connect my_wifi password <password>
+nmcli d wifi connect my_wifi password <password>
 ```
 **To disbale sleep from SSH**
 ```
@@ -62,15 +62,15 @@ cd ~/catkin_ws/src/rpi_ros_car/src
 ## ROS
 Kill roscore
 ```sh
-$killall -9 rosmaster
+killall -9 rosmaster
 ```
 #### Create a new catkin package
 ```sh
-$ cd ~/catkin_ws/src
+cd ~/catkin_ws/src
 ```
 Now use the catkin_create_pkg script to create a new package called 'rpi-ros_car' which depends on std_msgs, roscpp, and rospy:
 ```sh
-$ catkin_create_pkg rpi_ros_car std_msgs rospy 
+catkin_create_pkg rpi_ros_car std_msgs rospy 
 ```
 or if you already have existing package in github, you can clone it here (see git tuorials for details). 
 Then go to
@@ -92,7 +92,7 @@ $rosrun <package_name> <executable_name>
 ```
 To killa rosnode if ctrl+C is not working,
 ```sh
-$rosnode kill yourNodeName
+rosnode kill yourNodeName
 ```
 To get a list of ros node
 ```sh
@@ -110,11 +110,11 @@ rosnode info <topic name/node name>
 
 ### Ros package update on Raspberry pi (if you have installed ROS on raspbian image)
 ```sh
-$ mv -i kinetic-ros_comm-wet.rosinstall kinetic-ros_comm-wet.rosinstall.old
-$ rosinstall_generator ros_comm --rosdistro kinetic --deps --wet-only --tar > kinetic-ros_comm-wet.rosinstall
-$ diff -u kinetic-ros_comm-wet.rosinstall kinetic-ros_comm-wet.rosinstall.old
-$ wstool merge -t src kinetic-ros_comm-wet.rosinstall
-$ wstool update -t src
+mv -i kinetic-ros_comm-wet.rosinstall kinetic-ros_comm-wet.rosinstall.old
+rosinstall_generator ros_comm --rosdistro kinetic --deps --wet-only --tar > kinetic-ros_comm-wet.rosinstall
+diff -u kinetic-ros_comm-wet.rosinstall kinetic-ros_comm-wet.rosinstall.old
+wstool merge -t src kinetic-ros_comm-wet.rosinstall
+wstool update -t src
 ```
 
 ## Windows Commad line
@@ -176,10 +176,10 @@ git config --global credential.helper store
 adding an existing folder to github
 It is always best to create a git repo on git hub first and then clone the repo on the local drive. If you are dealing with catkin packages, then before creating the package first clone the git repo and then create the package with the same name. 
 ```sh
-$git pull
-$git add --all
-$git commit -m "message"
-$git push 
+git pull
+git add --all
+git commit -m "message"
+git push 
 ```
 Ignore a file that is being tracked currently
 ```sh
@@ -187,9 +187,9 @@ git rm --cached <file>
 ```
 Creating and applying stash
 ```sh
-$ git stash
-$ git stash list
-$ git stash apply stash@{stash_index}
+git stash
+git stash list
+git stash apply stash@{stash_index}
 ```
 If you want to combine git commit and push in one command then create a make file with following commands (remember to place the make file in the smae directory where .git folder resides)
 ```sh
@@ -206,7 +206,7 @@ make git m="your message"
 
 Which version of Raspbian do I have?
 ```sh
-$cat /etc/os-release
+cat /etc/os-release
 ```
 #### How to modify the swap?
 First turned off the swap - 
@@ -244,7 +244,7 @@ nmcli d wifi list
 ```
 If it shows all the networks nearby then  -
 ```sh
-$ sudo nmcli d wifi connect my_wifi password <password>
+sudo nmcli d wifi connect my_wifi password <password>
 ```
 If for some reason it throws some error or does not show the wifi list on the command nmcli d wifi list, then try the following - 
 ```sh
