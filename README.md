@@ -27,7 +27,7 @@ As an example, to connect to the access point 'my_wifi', you would use the follo
 ```sh
 nmcli d wifi connect my_wifi password <password>
 ```
-**To disbale sleep from SSH**
+**Disbale sleep from SSH**
 ```
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 ```
