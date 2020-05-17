@@ -31,6 +31,15 @@ $sudo rm -vr folderName
 ```sh
 $ touch filename.py
 ```
+To change the default bash directory, open the .bashrc file from home directory as below
+```sh
+nano ~/.bashrc
+```
+and then just add *cd <desired dir name>* at the end. For example - 
+```sh
+cd ~/catkin_ws/src/rpi_ros_car/src
+``
+
 
 
 ## ROS
