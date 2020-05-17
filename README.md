@@ -277,7 +277,7 @@ sonars: None
 # sonars: ‘pi_sonar_v1’
 ```
 Thats it. 
-**To monitor core temperature of Raspberry Pi**
+**To check core temperature of Raspberry Pi**
 ```
 ~/opt/vc/bin/vcgencmd measure_temp
 ```
