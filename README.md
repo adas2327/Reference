@@ -301,7 +301,7 @@ Thats it.
 		  HostName rpi4ros
 		  User ubuntu
 		  ForwardAgent yes
-		  IdentityFile C:\Users\<user_name>\.ssh\id_rsa
+		  IdentityFile C:\Users\<user_name> \.ssh\id_rsa
 		  Port 22
 	```
 1. Press ```F1``` again, and now try *Remote SSH: Connect to Host*. Now it should connect to the server without any issues. 
