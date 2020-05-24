@@ -295,7 +295,7 @@ Thats it.
 1. Now in VSCode, search and install the following extensions - 
 	1. Remote Development
 	2. Remote SSH (Nightly)
-1. Then Press ```F1``` and type ```remote SSH``` to select *Remote SSH: Open Configuration File*. Here is an example of what I had to do to connect Raspberry Pi with VSCode. With out the full address for id_rsa (private key generated either by OpenSSH or PuttyGen) and port number, I was having some difficulties connecting to server. 
+1. While in VSCode, press ```F1``` and type ```remote SSH``` to select *Remote SSH: Open Configuration File*. Here is an example of what I had to do to connect Raspberry Pi with VSCode. With out the full address for id_rsa (private key generated either by OpenSSH or PuttyGen) and port number, I was having some difficulties connecting to server. 
 	``` sh 
 		Host rpi4ros
 		  HostName rpi4ros
@@ -304,6 +304,9 @@ Thats it.
 		  IdentityFile C:\Users\adas2\.ssh\id_rsa
 		  Port 22
 	```
+1. Press F1 again, and now try *Remote SSH: Connect to Host..*. Now it should connect to the server without any issues. 
+
+
 
 	
 
