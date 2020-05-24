@@ -284,10 +284,10 @@ Thats it.
 ~/opt/vc/bin/vcgencmd measure_temp
 ```
 
-##SSH
+## SSH
 **How to Connect VSCode to server through ssh for remote debugging?**
 1. Create SSH key (public and private) on the client PC (for example a Windows PC). There are few ways one can generate keys on Windows - using putty or openSSH.
-	1. OpenSSH - Install OpenSSH for Windows.  Follow the instruction given in [OpenSSH for Windows](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). Then run '''sh ssh-keygen -t rsa''' from the Windows cmd prompt. The key will be generated and will be saved under c:/user/<username>/.ssh/. 
+	1. OpenSSH - Install OpenSSH for Windows.  Follow the instruction given in [OpenSSH for Windows](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). Then run ```sh ssh-keygen -t rsa``` from the Windows cmd prompt. The key will be generated and will be saved under c:/user/<username>/.ssh/. 
 	2. Using *PuttyGen* - Generate the key and save it to a location like c:/user/<username>/.ssh/. The private key for putty is called *.ppk is not compatible with OpenSSH. Therefore the private key needs to be converted into OpenSSH format. From the PuttyGen go to *Conversion* and select *Export OpenSSH key* to convert and save the private file in the desired location. 
 	3. The public key can be copied from PuttyGen and saved in a file may be named as *authorized_keys*. Please note that this file does not have any extension. 
 2. Move the public key named *authorized_keys* to the server home directiory (lets say its a Ubuntu Machine) like /home/Ubuntu/.ssh/. If there is no .ssh folder exists, just create one  using '''sh sudo mkdir /.ssh'''
