@@ -291,16 +291,19 @@ Thats it.
 	2. Using *PuttyGen* - Generate the key and save it to a location like ```c:/user/<username>/.ssh/```. The private key for putty is called *.ppk is not compatible with OpenSSH. Therefore the private key needs to be converted into OpenSSH format. From the PuttyGen go to *Conversion* and select *Export OpenSSH key* to convert and save the private file in the desired location. 
 	3. The public key can be copied from PuttyGen and saved in a file may be named as *authorized_keys*. Please note that this file does not have any extension. 
 2. Move the public key named *authorized_keys* to the server home directiory (lets say its a Ubuntu Machine) like /home/Ubuntu/.ssh/. If there is no .ssh folder exists, just create one  using ```sh sudo mkdir /.ssh```.
+3. At this point of time, the client machine (like Windows) can connect to Server (Like ubuntu) without entering password. One should check it from windowd powershell or command line by using ```ssh username@hostname```. 
 3. Now in VSCode, search and install the following extensions - 
 	1. Remote Development
 	2. Remote SSH (Nightly)
-4. Then Press ```F1``` and type ```remote SSH``` to select *Remote SSH: Open Configuration File*. Here is an example of what I had to do to connect Raspberry Pi with VSCode. 
-	``` sh Host rpi4ros
+4. Then Press ```F1``` and type ```remote SSH``` to select *Remote SSH: Open Configuration File*. Here is an example of what I had to do to connect Raspberry Pi with VSCode. With out the full address for id_rsa (private key generated either by OpenSSH or PuttyGen) and port number, I was having some difficulties connecting to server. 
+	``` sh 
+		Host rpi4ros
 		  HostName rpi4ros
 		  User ubuntu
 		  ForwardAgent yes
 		  IdentityFile C:\Users\adas2\.ssh\id_rsa
-		  Port 22```
+		  Port 22
+	```
 
 	
 
