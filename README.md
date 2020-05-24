@@ -284,5 +284,8 @@ Thats it.
 ~/opt/vc/bin/vcgencmd measure_temp
 ```
 
-
+##SSH
+**How to Connect VSCode to server through ssh for remote debugging?**
+1. Create SSH key (public and private) on the client PC (for example a Windows PC). There are few ways one can generate keys on Windows - using putty or openSSH.
+	1. OpenSSH - Install OpenSSH for Windows.  [OpenSSH for Windows(]https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse)
 
