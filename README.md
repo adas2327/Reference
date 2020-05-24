@@ -304,7 +304,7 @@ Thats it.
 		  IdentityFile C:\Users\adas2\.ssh\id_rsa
 		  Port 22
 	```
-1. Press F1 again, and now try *Remote SSH: Connect to Host..*. Now it should connect to the server without any issues. 
+1. Press ```F1``` again, and now try *Remote SSH: Connect to Host*. Now it should connect to the server without any issues. 
 
 
 
