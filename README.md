@@ -169,7 +169,14 @@ choco upgrade all -y
 ```
 
 ## git 
-If youa re using git for the first time - 
+Connecting git through ssh
+1. generate public and private keys through putty
+2. Save private and public keys with name id_rsa (click Yes for ignoring passphrase protection)
+3. make sure the saved key on PC is of OpenSSH type (use Conversion --> Export OpenSSH option)
+4. Add Public key to git
+5. Test connection by typing ```ssh -vT git@github.com``` on a command window.
+
+If you are using git for the first time - 
 ```sh
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
